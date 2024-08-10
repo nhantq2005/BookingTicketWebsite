@@ -1,0 +1,154 @@
+/* Chung */
+
+
+body{
+    font-family: Arial, serif;
+    color: black;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    margin-bottom: 1rem;
+}
+
+.flex_nowrap{
+    display: flex;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width:500px) {
+    html{
+        font-size: 8px;
+    }
+    a{
+        font-size: 1rem;
+    }
+    .filter{
+        width: 100%;
+        display: block;
+    }
+    
+}
+
+/* Thanh chuyển giữa các trang */
+
+ul.navBar{
+    padding: 0;
+    margin: 0;
+    height: 4.5rem;
+    width: 100%;
+    background-color: #BAE8E8;
+    border-radius: 1rem;
+    list-style-type: none;
+}
+
+ul.navBar>li>a{
+    padding: 1.5rem;
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    align-items:center;
+    display: block;
+    text-decoration: none;
+}
+
+
+ul.navBar>li>a:hover{
+    cursor: pointer;
+    background-color: #8FC1C1;
+    border-radius: 5%;
+}
+
+.navBar i{
+    width: 1rem;
+    /*padding: 1.5rem;*/
+    margin-bottom: 0;
+}
+
+ul.navBar>li:first-child{
+    margin-right: auto;
+}
+
+#name{
+    font-size: 1.7rem;
+}
+
+#name:hover{
+    background-color: transparent;
+}
+
+ul.navBar>li:hover .subMenu{
+    display: block;
+    cursor: pointer;
+}
+
+ul.subMenu{   
+    display: none;
+    position: absolute;
+    width: 5rem;
+    list-style-type: none;
+    line-height: 1.5rem;
+    right: 0;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    border-radius: 5%;
+    box-shadow: 0 0 5px rgba(0,0,0, 0.4);
+    background-color: white;
+}
+
+/* Thanh tìm kiếm */
+
+div.searchBar{
+    width: 75%;
+    background-color:#E3F6F5;
+    border-radius: 1rem;
+    margin: auto;
+    padding: 0.5rem;
+    text-align: center;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.searchBar img{
+    width: 2rem;
+    padding-right: 0;
+}
+
+.searchBar select,input,button,img{
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    padding: 0.7rem;
+    margin: 0.5rem;
+}
+
+.searchBar button{
+    background-color: #FFD803;
+    font-weight: bold;
+    width: 6rem;
+    cursor: pointer;
+}
+
+.searchBar p{
+    justify-content: center;
+    font-weight: bold;
+    padding:  0.5rem ;
+    margin-right: 0;
+    display: inline;
+}
+
+/* Footer */
+footer{
+    background-color: #2077B6;
+    color: white;
+    padding: 0.5rem;
+}

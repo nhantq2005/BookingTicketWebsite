@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/General.css" rel="stylesheet"/>
+    <link href="CSS/Category.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="JS/OBUS.js"></script>
+    <title>OBUS - Tìm kiếm</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navBar flex">
+                <li><a id="name" href="#">OBUS</a></li>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Vé của tôi</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li>
+                    <a><i class='fas fa-user-alt' id="user"></i></a>
+                    <ul class="subMenu">
+                        <li><a href="#">Thông tin</a></li>
+                        <li><a href="#"></a>Vé của tôi</li>
+                        <li><a href="#"></a>Đăng xuất</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+        <nav>
+            <div class="searchBar flex">
+                <img src="IMG/place.png">
+                <select id="start" name="Điểm xuất phát">
+                <option value="" disabled selected>Điểm xuất phát</option>
+                <option>Sài Gòn</option>
+                <option>Vũng Tàu</option>
+                </select>
+                <img id="swap" src="IMG/exchange.png" onclick="">
+                <img src="IMG/place.png">
+                <select id="destination" name="Điểm đến">
+                    <option value="" disabled selected>Điểm đến</option>
+                    <option>Đà Lạt</option>
+                    <option>Nha Trang</option>
+                </select>
+                <p>Ngày đi</p>
+                <input type="date" id="dateStart">
+                <p>Ngày về</p>
+                <input type="date" id="dateEnd">
+                <button id="searchButon" onclick="getter()">Tìm kiếm</button>
+            </div>
+        </nav>
+        <main class="flex">
+            <section class="filter">
+                <h2>Lọc</h2>
+                <h3>Giá vé</h3>
+                <div class="flex">
+                    <input type="number" id="minPrice" placeholder="Từ">
+                    <input type="number" id="maxPrice" placeholder="Đến">
+                </div>
+                <h3>Loại ghế</h3>
+                <label>
+                    <input type="radio" name="option" value="1"> Ghế
+                    <input type="radio" name="option" value="1"> Giường nằm
+                </label>
+            </section>
+            <section class="info">
+                <div>
+                    <h1>a</h1>
+                    <h1>a</h1>
+                    <h1>a</h1>
+                    <h1>a</h1>
+                    <h1>a</h1>
+                    <i class='far fa-user-circle'></i>
+                    <h1>a</h1>
+                    <h1>a</h1>
+                    <h1>a &#xf406;</h1>
+                    <h1>a</h1>
+                    <h1>a</h1>
+                    <h1>a</h1>
+                    <h1>a</h1>
+                    <h1>a</h1>
+                    <h1>a</h1>
+                    <h1>a</h1>
+                    <h1>a</h1>
+                    <button style='font-size:24px'>Button <i class='fas fa-user-alt'></i></button>
+                    <h1>a</h1>
+
+                </div>
+            </section>
+            <img src="IMG/arrow-up.png" href="#navBar">
+        </main>
+    <footer>
+        <p><strong>Email: </strong>obus.booking@gmail.com</p>
+        <p><strong>SĐT: </strong>0912345678</p>
+        <p><strong>Địa chỉ: </strong>Khu dân cư Nhơn Đức, huyện Nhà Bè, TP.HCM</p>
+    </footer>
+</body>
+</html>

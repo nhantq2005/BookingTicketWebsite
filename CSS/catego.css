@@ -1,0 +1,70 @@
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+body{
+    font-family: Arial;
+}
+
+/* Thanh chuyển trang */
+h1{
+    font-size: 1.5rem;
+    margin: 0 0  0 1rem;
+}
+
+a{
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
+}
+
+nav{
+    background-color: #BAE8E8;
+    border-radius: 1rem;
+}
+
+ul.navBar{
+    list-style-type: none;
+    padding-right: 1rem;
+    position: relative;
+}
+
+ul.navBar>li>a:hover{
+    background-color: #8FC1C1;
+    border-radius: 5%;
+}
+
+
+ul.navBar>li>a{
+    padding: 1.5rem;
+}
+
+
+img{
+    width: 2rem;
+    padding: 0.5rem;
+}
+/* Tiêu đề */
+.title{
+    font-size: 1.5rem;
+    margin: 1.5rem;
+}
+/* Menu con */
+.subMenu{
+    display: none;
+    position: absolute;
+}
+
+.subMenu>li{
+    list-style-type: none;
+    text-align: start;
+    padding: 0.5rem;
+}
+
+#account:hover .subMenu{
+    display: block;
+}
