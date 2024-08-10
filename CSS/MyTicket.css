@@ -3,3 +3,40 @@ h3{
     padding: 1rem;
 }
 
+/*Vé*/
+.ticket h3,p{
+    margin: 0;
+}
+
+.ticket:hover{
+    box-shadow: 0 0 9px rgba(0,0,0,0.4);
+}
+
+.ticketInfor{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticket i{
+    font-size: 2rem
+}
+
+p.price{
+    font-size: 1.5rem;
+    color: #FF5E1F;
+    font-weight: bold;
+}
+
+.ticket span{
+    font-size: 1rem;
+    color: darkgray;
+}
+.bookingButton{
+    background-color:#FF5E1F;
+    color: white;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+}
+
+

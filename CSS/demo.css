@@ -1,12 +1,17 @@
+
 .ticket{
-    width: 70%;
     border-radius: 1rem;
-    padding: 2rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    padding: 1.5rem;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    margin-bottom: 1rem;
 }
 
-.ticket h3,h5{
+.ticket h3,p{
     margin: 0;
+}
+
+.ticket:hover{
+    box-shadow: 0 0 9px rgba(0,0,0,0.4);
 }
 
 .ticketInfor{
@@ -24,7 +29,7 @@ p.price{
     font-weight: bold;
 }
 
-span{
+.ticket span{
     font-size: 1rem;
     color: darkgray;
 }

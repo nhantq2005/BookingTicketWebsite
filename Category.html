@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="CSS/General.css" rel="stylesheet"/>
     <link href="CSS/Category.css" rel="stylesheet"/>
+    <link href="CSS/demo.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <script src="JS/OBUS.js"></script>
@@ -13,10 +14,10 @@
 <body>
     <header>
         <nav>
-            <ul class="navBar flex">
+            <ul class="navBar flex_nowrap">
                 <li><a id="name" href="#">OBUS</a></li>
                 <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Vé của tôi</a></li>
+                <li><a href="MyTicket.html">Vé của tôi</a></li>
                 <li><a href="#">Liên hệ</a></li>
                 <li>
                     <a><i class='fas fa-user-alt' id="user"></i></a>
@@ -42,13 +43,13 @@
                 <select id="destination" name="Điểm đến">
                     <option value="" disabled selected>Điểm đến</option>
                     <option>Đà Lạt</option>
-                    <option>Nha Trang</option>
+                    <option>Cần Thơ</option>
                 </select>
                 <p>Ngày đi</p>
                 <input type="date" id="dateStart">
                 <p>Ngày về</p>
                 <input type="date" id="dateEnd">
-                <button id="searchButon" onclick="getter()">Tìm kiếm</button>
+                <button id="searchButon" onclick="appendHTML()">Tìm kiếm</button>
             </div>
         </nav>
         <main class="flex">
@@ -66,30 +67,9 @@
                 </label>
             </section>
             <section class="info">
-                <div>
-                    <h1>a</h1>
-                    <h1>a</h1>
-                    <h1>a</h1>
-                    <h1>a</h1>
-                    <h1>a</h1>
-                    <i class='far fa-user-circle'></i>
-                    <h1>a</h1>
-                    <h1>a</h1>
-                    <h1>a &#xf406;</h1>
-                    <h1>a</h1>
-                    <h1>a</h1>
-                    <h1>a</h1>
-                    <h1>a</h1>
-                    <h1>a</h1>
-                    <h1>a</h1>
-                    <h1>a</h1>
-                    <h1>a</h1>
-                    <button style='font-size:24px'>Button <i class='fas fa-user-alt'></i></button>
-                    <h1>a</h1>
-
-                </div>
+                <ul id="tickets">
+                </ul>
             </section>
-            <img src="IMG/arrow-up.png" href="#navBar">
         </main>
     <footer>
         <p><strong>Email: </strong>obus.booking@gmail.com</p>

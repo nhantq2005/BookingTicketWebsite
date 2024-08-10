@@ -1,6 +1,4 @@
 /* Chung */
-
-
 body{
     font-family: Arial, serif;
     color: black;
@@ -14,6 +12,10 @@ a{
 
 header{
     margin-bottom: 1rem;
+}
+
+ul li{
+    list-style-type: none;
 }
 
 .flex_nowrap{
@@ -70,7 +72,6 @@ ul.navBar>li>a:hover{
 
 .navBar i{
     width: 1rem;
-    /*padding: 1.5rem;*/
     margin-bottom: 0;
 }
 
@@ -113,7 +114,6 @@ div.searchBar{
     border-radius: 1rem;
     margin: auto;
     padding: 0.5rem;
-    text-align: center;
     box-sizing: border-box;
     justify-content: center;
 }
@@ -134,12 +134,11 @@ div.searchBar{
 .searchBar button{
     background-color: #FFD803;
     font-weight: bold;
-    width: 6rem;
     cursor: pointer;
 }
 
 .searchBar p{
-    justify-content: center;
+    align-content: center;
     font-weight: bold;
     padding:  0.5rem ;
     margin-right: 0;
@@ -150,5 +149,6 @@ div.searchBar{
 footer{
     background-color: #2077B6;
     color: white;
+    line-height: 1.5rem;
     padding: 0.5rem;
 }
