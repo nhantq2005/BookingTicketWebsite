@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="CSS/General.css" rel="stylesheet"/>
     <link href="CSS/Category.css" rel="stylesheet"/>
-    <link href="CSS/demo.css" rel="stylesheet"/>
+   <!-- <link href="CSS/demo.css" rel="stylesheet"/> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="icon" type="image/x-icon" href="IMG/Logo.png">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <script src="JS/OBUS.js"></script>
     <title>OBUS - Tìm kiếm</title>
@@ -18,13 +19,28 @@
                 <li><a id="name" href="#">OBUS</a></li>
                 <li><a href="#">Trang chủ</a></li>
                 <li><a href="MyTicket.html">Vé của tôi</a></li>
-                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#footer">Liên hệ</a></li>
                 <li>
                     <a><i class='fas fa-user-alt' id="user"></i></a>
                     <ul class="subMenu">
-                        <li><a href="#">Thông tin</a></li>
-                        <li><a href="#"></a>Vé của tôi</li>
-                        <li><a href="#"></a>Đăng xuất</li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-id-card"></i>
+                                Thông tin
+                            </a>
+                        </li>
+                        <li>
+                            <a href="UserInformation.html">
+                                <i class="fa fa-ticket"></i>
+                                Vé của tôi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-sign-out"></i>
+                                Đăng xuất
+                            </a>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -34,14 +50,18 @@
             <div class="searchBar flex">
                 <img src="IMG/place.png">
                 <select id="start" name="Điểm xuất phát">
-                <option value="" disabled selected>Điểm xuất phát</option>
-                <option>Sài Gòn</option>
-                <option>Vũng Tàu</option>
+                    <option value="" disabled selected>Điểm xuất phát</option>
+                    <option>Sài Gòn</option>
+                    <option>Vũng Tàu</option>
+                    <option>Đà Lạt</option>
+                    <option>Cần Thơ</option>
                 </select>
-                <img id="swap" src="IMG/exchange.png" onclick="">
+                <img id="swap" src="IMG/exchange.png" onclick="SwapPlace()">
                 <img src="IMG/place.png">
                 <select id="destination" name="Điểm đến">
                     <option value="" disabled selected>Điểm đến</option>
+                    <option>Sài Gòn</option>
+                    <option>Vũng Tàu</option>
                     <option>Đà Lạt</option>
                     <option>Cần Thơ</option>
                 </select>
@@ -71,7 +91,7 @@
                 </ul>
             </section>
         </main>
-    <footer>
+    <footer id="footer">
         <p><strong>Email: </strong>obus.booking@gmail.com</p>
         <p><strong>SĐT: </strong>0912345678</p>
         <p><strong>Địa chỉ: </strong>Khu dân cư Nhơn Đức, huyện Nhà Bè, TP.HCM</p>

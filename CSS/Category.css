@@ -33,8 +33,16 @@ section{
     width: 75%; 
 }
 
+
+.ticket{
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    margin-bottom: 1rem;
+}
+
 .ticket h3,p{
-    margin: 0;
+    margin:0;
 }
 
 .ticket:hover{
@@ -66,4 +74,5 @@ p.price{
     font-weight: bold;
     display: block;
     width: 100%;
+    cursor: pointer;
 }

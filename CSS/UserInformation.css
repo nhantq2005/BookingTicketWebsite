@@ -1,0 +1,35 @@
+input{
+    display: block;
+}
+
+section{
+    padding: 1.5rem;
+}
+
+.saveBtn{
+    color: white;
+    background-color: #5AB2FF;
+    width: 10%;
+}
+
+.saveBtn:hover{
+    cursor: pointer;
+}
+
+section{
+    padding-left: 2.5rem;
+    padding-top: 0;
+}
+
+
+input{
+    padding: 1rem;
+    width: 30%;
+    border: 1px black solid;
+}
+
+label{
+    font-weight: 700;
+
+}
+

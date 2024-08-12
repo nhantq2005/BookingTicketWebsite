@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="CSS/General.css" rel="stylesheet">
+    <link href="CSS/UserInformation.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="icon" type="image/x-icon" href="IMG/Logo.png">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="JS/OBUS.js"></script>
+    <title>OBUS - Thông tin</title>
+</head>
+<body>
+<header>
+    <nav>
+        <ul class="navBar flex_nowrap">
+            <li><a id="name" href="#">OBUS</a></li>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="MyTicket.html">Vé của tôi</a></li>
+            <li><a href="#footer">Liên hệ</a></li>
+            <li>
+                <a><i class='fas fa-user-alt' id="user"></i></a>
+                <ul class="subMenu">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-id-card"></i>
+                            Thông tin
+                        </a>
+                    </li>
+                    <li>
+                        <a href="UserInformation.html">
+                            <i class="fa fa-ticket"></i>
+                            Vé của tôi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-sign-out"></i>
+                            Đăng xuất
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <h2>
+            <i class="fa fa-pencil-square-o"></i>
+            Thông tin khách hàng
+        </h2>
+        <label for="lastName">Họ</label>
+        <input type="text" placeholder="Họ" id="lastName">
+        <label for="firstName">Tên</label>
+        <input type="text" placeholder="Tên" id="firstName">
+        <label for="age">Năm sinh</label>
+        <input type="date" placeholder="Tuổi" id="age">
+        <label for="phoneNumber">Nhập số điện thoại</label>
+        <input type="text" placeholder="Số điện thoại" id="phoneNumber">
+        <label for="phoneNumber">Nhập Email</label>
+        <input type="email" placeholder="abc123@gmail.com" id="email">
+        <button class="saveBtn" onclick="">
+            <i class="fas fa-save"></i>
+            Lưu
+        </button>
+    </section>
+</main>
+<footer id="footer">
+    <p><strong>Email: </strong>obus.booking@gmail.com</p>
+    <p><strong>SĐT: </strong>0912345678</p>
+    <p><strong>Địa chỉ: </strong>Khu dân cư Nhơn Đức, huyện Nhà Bè, TP.HCM</p>
+</footer>
+</body>
+</html>

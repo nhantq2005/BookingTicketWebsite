@@ -1,8 +1,8 @@
 /* Chung */
-body{
+html{
     font-family: Arial, serif;
     color: black;
-    position: relative;
+    scroll-behavior: smooth;
 }
 
 a{
@@ -42,7 +42,6 @@ ul li{
 }
 
 /* Thanh chuyển giữa các trang */
-
 ul.navBar{
     padding: 0;
     margin: 0;
@@ -95,19 +94,22 @@ ul.navBar>li:hover .subMenu{
 ul.subMenu{   
     display: none;
     position: absolute;
-    width: 5rem;
+    width: 7rem;
     list-style-type: none;
     line-height: 1.5rem;
     right: 0;
-    margin-top: 0.5rem;
+    /*margin-top: 0rem;*/
     padding: 1rem;
     border-radius: 5%;
     box-shadow: 0 0 5px rgba(0,0,0, 0.4);
     background-color: white;
 }
 
-/* Thanh tìm kiếm */
+ul.subMenu li{
+    line-height: 3rem;
+}
 
+/* Thanh tìm kiếm */
 div.searchBar{
     width: 75%;
     background-color:#E3F6F5;
@@ -144,6 +146,7 @@ div.searchBar{
     margin-right: 0;
     display: inline;
 }
+
 
 /* Footer */
 footer{

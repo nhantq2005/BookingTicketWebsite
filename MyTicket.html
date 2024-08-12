@@ -6,6 +6,7 @@
     <link href="CSS/General.css" rel="stylesheet"/>
     <link href="CSS/MyTicket.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="icon" type="image/x-icon" href="IMG/Logo.png">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <script src="JS/OBUS.js"></script>
     <title>OBUS - Vé của tôi</title>
@@ -13,17 +14,32 @@
 <body>
     <header>
         <nav>
-            <ul class="navBar flex">
+            <ul class="navBar flex_nowrap">
                 <li><a id="name" href="#">OBUS</a></li>
                 <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Vé của tôi</a></li>
-                <li><a href="#">Liên hệ</a></li>
+                <li><a href="MyTicket.html">Vé của tôi</a></li>
+                <li><a href="#footer">Liên hệ</a></li>
                 <li>
                     <a><i class='fas fa-user-alt' id="user"></i></a>
                     <ul class="subMenu">
-                        <li><a href="#">Thông tin</a></li>
-                        <li><a href="MyTicket.html"></a>Vé của tôi</li>
-                        <li><a href="#"></a>Đăng xuất</li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-id-card"></i>
+                                Thông tin
+                            </a>
+                        </li>
+                        <li>
+                            <a href="UserInformation.html">
+                                <i class="fa fa-ticket"></i>
+                                Vé của tôi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-sign-out"></i>
+                                Đăng xuất
+                            </a>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -36,7 +52,6 @@
         <p><strong>Email: </strong>obus.booking@gmail.com</p>
         <p><strong>SĐT: </strong>0912345678</p>
         <p><strong>Địa chỉ: </strong>Khu dân cư Nhơn Đức, huyện Nhà Bè, TP.HCM</p>
-    </footer>
     </footer>
 </body>
 </html>
