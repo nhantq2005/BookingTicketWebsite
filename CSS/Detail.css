@@ -1,0 +1,22 @@
+div.thumb div{
+    width: 20%;
+    padding: 0.3rem;
+    box-sizing: border-box;
+}
+
+div.showImages img{
+    width: 100%;
+
+}
+
+.showImages{
+    width: 40%;
+}
+
+.detailTicket{
+    width: 50%;
+}
+section button{
+    display: block;
+
+}

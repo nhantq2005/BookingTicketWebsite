@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="CSS/General.css" rel="stylesheet"/>
-    <link href="CSS/MyTicket.css" rel="stylesheet"/>
+    <link href="CSS/General.css" rel="stylesheet">
+    <link href="CSS/Detail.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <link rel="icon" type="image/x-icon" href="IMG/Logo.png">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <script src="JS/OBUS.js"></script>
-    <title>OBUS - Vé của tôi</title>
+    <title>OBUS - Chi tiết</title>
 </head>
 <body>
     <header>
@@ -45,10 +45,39 @@
             </ul>
         </nav>
     </header>
-    <section>
-        <h3>Vé của tôi</h3>
-    </section>
-    <footer>
+    <main>
+        <section class="flex">
+            <!-- <div class="flex"> -->
+                <div class="showImages">
+                    <img src="IMG/Bus_1.jpeg" alt="bus" id="mainImg">
+                    <div class="thumb flex">
+                        <div><img src="IMG/Bus_1.jpeg" alt=""></div>
+                        <div><img src="IMG/Bus_2.jpeg" alt=""></div>
+                        <div><img src="IMG/Bus_3.jpeg" alt=""></div>
+                        <div><img src="IMG/Bus_4.jpeg" alt=""></div>
+                        <div><img src="IMG/Bus_5.jpeg" alt=""></div>
+                    </div>
+                </div>
+                <div class="detailTicket">
+                    <h2 id="nameBus">NAME</h2>
+                    <p>TYPE</p>
+                    <h3>TỪ - ĐẾN</h3>
+                    <h3>GIÁ VÉ</h3>
+                    <label for="quantity">Số lượng:</label>
+                    <input type="number" id="quantity">
+                    <button>Đặt ngay</button>
+                </div>
+            <!-- </div> -->
+        </section>
+        <section>
+            <h2>Thông tin</h2>
+            <p><strong>Loại xe: </strong>Limousine</p>
+            <p><strong>Số chỗ: </strong>Limousine</p>
+            <p><strong>Tiện ích: </strong>Wifi, Sạc, Chăn mền, TV</p>
+        </section>
+        <button id="toUp"><i class='fas fa-long-arrow-alt-up'></i></button>
+    </main>
+    <footer id="footer">
         <p><strong>Email: </strong>obus.booking@gmail.com</p>
         <p><strong>SĐT: </strong>0912345678</p>
         <p><strong>Địa chỉ: </strong>Khu dân cư Nhơn Đức, huyện Nhà Bè, TP.HCM</p>

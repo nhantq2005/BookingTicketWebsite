@@ -6,14 +6,18 @@ section{
     padding: 1.5rem;
 }
 
-.saveBtn{
+#saveBtn{
     color: white;
     background-color: #5AB2FF;
     width: 10%;
 }
 
-.saveBtn:hover{
+#saveBtn:hover{
     cursor: pointer;
+}
+
+#saveBtn:active{
+    background-color: #4892d3;
 }
 
 section{

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="CSS/General.css" rel="stylesheet"/>
     <link href="CSS/Category.css" rel="stylesheet"/>
-   <!-- <link href="CSS/demo.css" rel="stylesheet"/> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <link rel="icon" type="image/x-icon" href="IMG/Logo.png">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
@@ -16,15 +15,15 @@
     <header>
         <nav>
             <ul class="navBar flex_nowrap">
-                <li><a id="name" href="#">OBUS</a></li>
-                <li><a href="#">Trang chủ</a></li>
+                <li><a id="name" href="index.html">OBUS</a></li>
+                <li><a href="index.html">Trang chủ</a></li>
                 <li><a href="MyTicket.html">Vé của tôi</a></li>
                 <li><a href="#footer">Liên hệ</a></li>
                 <li>
                     <a><i class='fas fa-user-alt' id="user"></i></a>
                     <ul class="subMenu">
                         <li>
-                            <a href="#">
+                            <a href="UserInformation.html">
                                 <i class="fa fa-id-card"></i>
                                 Thông tin
                             </a>
@@ -69,22 +68,33 @@
                 <input type="date" id="dateStart">
                 <p>Ngày về</p>
                 <input type="date" id="dateEnd">
-                <button id="searchButon" onclick="appendHTML()">Tìm kiếm</button>
+                <button id="searchButton">Tìm kiếm</button>
             </div>
         </nav>
         <main class="flex">
             <section class="filter">
-                <h2>Lọc</h2>
+                <h3>Lọc</h3>
                 <h3>Giá vé</h3>
                 <div class="flex">
                     <input type="number" id="minPrice" placeholder="Từ">
                     <input type="number" id="maxPrice" placeholder="Đến">
                 </div>
-                <h3>Loại ghế</h3>
-                <label>
-                    <input type="radio" name="option" value="1"> Ghế
-                    <input type="radio" name="option" value="1"> Giường nằm
+                <div>
+                    <h3>Loại ghế</h3>
+                    <label>
+                    <input type="radio" name="option" value=""> Ghế
+                    <input type="radio" name="option" value=""> Giường nằm
                 </label>
+                </div>
+                <div>
+                    <h3>Loại xe</h3>
+                    <label>
+                        <input type="radio" name="option1" value=""> 16 chỗ
+                        <input type="radio" name="option1" value=""> 36 chỗ
+                        <input type="radio" name="option1" value=""> 41 chỗ
+                    </label>
+                </div>
+               
             </section>
             <section class="info">
                 <ul id="tickets">

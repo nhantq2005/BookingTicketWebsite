@@ -1,0 +1,36 @@
+main{
+    padding: 1.5rem;
+}
+
+.populars{
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.populars div{
+    display: inline-block;
+    width: 20%;
+    margin: 1rem;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    text-align: center;
+    border-radius: 1rem;
+
+}
+
+.populars img{
+    width: 100%;
+    border-radius: 1.3rem;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.populars p{
+    font-size: 1.3rem;
+    font-weight: bold;
+    flex: auto;
+}
+
+#about p{
+    font-size: 1.1rem;
+    text-align: justify;
+}

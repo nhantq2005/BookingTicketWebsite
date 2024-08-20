@@ -4,10 +4,12 @@
     padding: 1.5rem;
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
     margin-bottom: 1rem;
+    width: 80%;
+
 }
 
-.ticket h3,p{
-    margin: 0;
+.ticket h3,h2{
+    margin-bottom: 0.1%;
 }
 
 .ticket:hover{
@@ -31,12 +33,10 @@ p.price{
 
 .ticket span{
     font-size: 1rem;
-    color: darkgray;
+    color: rgb(134, 134, 134);
+    padding: 1rem;
 }
-.bookingButton{
-    background-color:#FF5E1F;
-    color: white;
-    font-weight: bold;
-    display: block;
-    width: 100%;
+
+.state{
+    color: #14C38E;
 }

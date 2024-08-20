@@ -8,24 +8,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="ticket">
-        <h3>Dien Linh Limousine</h3>
-        <p>Limousine</p>
+    <div class="ticket" onclick='clickTicket()'  rel='${i}'>
+        <div class="flex">
+            <h3>Via</h3>
+            <h3 class="state">Đã đặt</h3>
+        </div>
+        <p>Ghế</p>
         <div class="flex ticketInfor">
             <div>
-                <h3>11:30</h3>
-                <p>VP Tân Bình</p>
+                <h2>11:00</h2>
+                <p>SG</p>
             </div>
             <i class="fa fa-long-arrow-right"></i>
             <div>
-                <h3>11:30</h3>
-                <p>VP Tân Bình</p>
+                <h2>12:00</h2>
+                <p>VT</p>
             </div>
-            <h2>7 giờ 5 phút</h2>
+            <h2>5:00</h2>
             <div>
-                <p class="price">230.000 VNĐ<span>/Khách</span></p>
-                <button class="bookingButton">Mua Ngay</button>
+                <p class="price">100 VNĐ<span>x2</span></p>
             </div>
+        </div>
+        <h3>
+            Thông tin
+        </h3>
+        <p>Tên: Nhân Trần</p>
+        <p>Số điện thoại: 0912345678</p>
+        <div class="flex">
+            <h2>Tổng tiền</h2>
+            <p class="price">500.000 VNĐ</p>
         </div>
     </div>
 </body>

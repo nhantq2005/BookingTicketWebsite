@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="CSS/General.css" rel="stylesheet"/>
+    <link href="CSS/index.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="icon" type="image/x-icon" href="IMG/Logo.png">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="JS/OBUS.js"></script>
+    <title>OBUS - Trang chủ</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navBar flex_nowrap">
+                <li><a id="name" href="index.html">OBUS</a></li>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="MyTicket.html">Vé của tôi</a></li>
+                <li><a href="#footer">Liên hệ</a></li>
+                <li>
+                    <a><i class='fas fa-user-alt' id="user"></i></a>
+                    <ul class="subMenu">
+                        <li>
+                            <a href="UserInformation.html">
+                                <i class="fa fa-id-card"></i>
+                                Thông tin
+                            </a>
+                        </li>
+                        <li>
+                            <a href="UserInformation.html">
+                                <i class="fa fa-ticket"></i>
+                                Vé của tôi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-sign-out"></i>
+                                Đăng xuất
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <nav>
+        <div class="searchBar flex">
+            <img src="IMG/place.png">
+            <select id="start" name="Điểm xuất phát">
+                <option value="" disabled selected>Điểm xuất phát</option>
+                <option>Sài Gòn</option>
+                <option>Vũng Tàu</option>
+                <option>Đà Lạt</option>
+                <option>Cần Thơ</option>
+            </select>
+            <img id="swap" src="IMG/exchange.png" onclick="SwapPlace()">
+            <img src="IMG/place.png">
+            <select id="destination" name="Điểm đến">
+                <option value="" disabled selected>Điểm đến</option>
+                <option>Sài Gòn</option>
+                <option>Vũng Tàu</option>
+                <option>Đà Lạt</option>
+                <option>Cần Thơ</option>
+            </select>
+            <p>Ngày đi</p>
+            <input type="date" id="dateStart">
+            <p>Ngày về</p>
+            <input type="date" id="dateEnd">
+            <button id="searchButton_main" >Tìm kiếm</button>
+        </div>
+    </nav>
+    <main>
+        <h2>Phổ biến</h2>
+        <div class="populars">
+            <div>
+                <img src="IMG/Vung_Tau.jpg" alt="">
+                <p>Sài Gòn - Vũng Tàu</p>
+            </div>
+            <div>
+                <img src="IMG/Can_Tho.jpg" alt="">
+                <p>Sài Gòn - Cần Thơ</p>
+            </div>
+            <div>
+                <img src="IMG/Da_Lat.jpg" alt="">
+                <p>Sài Gòn - Đà Lạt</p>
+            </div>
+            <div>
+                <img src="IMG/Sai_Gon.jpg" alt="">
+                <p>Phan Thiết - Sài Gòn</p>
+            </div>
+            <div>
+                <img src="IMG/Nha_Trang.jpg" alt="">
+                <p>Sài Gòn - Nha Trang</p>
+            </div>
+            <div>
+                <img src="IMG/Vung_Tau.jpg" alt="">
+                <p>Đà Lạt - Vũng Tàu</p>
+            </div>
+        </div>
+        <h2>Ưu đãi</h2>
+        <div class="populars">
+            <div>
+                <img src="IMG/Quoc_Khanh.jpg" alt="">
+                <p>Lễ Quốc Khánh 2/9</p>
+            </div>
+            <div>
+                <img src="IMG/Sinh_Vien.jpg" alt="">
+                <p>Ưu đãi cho sinh viên</p>
+            </div>
+        </div>
+        <h2>Bến xe khách</h2>
+        <div class="populars">
+            <div>
+                <img src="IMG/Ben_MD.jpg" alt="">
+                <p>Bến xe Miền Đông</p>
+            </div>
+            <div>
+                <img src="IMG/Ben_VT.jpg" alt="">
+                <p>Bến xe Vũng Tàu</p>
+            </div>
+            <div>
+                <img src="IMG/Ben_DL.jpg" alt="">
+                <p>Bến xe Đà Lạt</p>
+            </div>
+        </div>
+        <h2>Về chúng tôi</h2>
+        <div id="about">
+            <p>
+                Được thành lập từ năm 2024, OBUS đã xây dựng được tên tuổi hàng đầu với bề dày hoạt động 
+                trong lĩnh vực thương mại điện tử, công nghệ và du lịch. OBUS tự hào là đơn vị đi đầu trong 
+                sự nghiệp cách mạng ngành xe khách và du lịch Việt Nam bao gồm các giải pháp: đặt vé & phương 
+                tiện thông minh cho hành khách, phần mềm quản lý hiệu quả cho nhà xe (BMS - Bus Management System) 
+                và phần mềm hỗ trợ bán vé hiệu quả cho đại lý (AMS- Agent Management System).
+            </p>
+            <p>
+                Hiện tại, OBUS là hệ thống vé xe lớn nhất Việt Nam. Không chỉ mang đến cho người dùng đa dạng 
+                lựa chọn về hãng xe, dòng xe và giải pháp đặt vé nhanh chóng, tiện lợi, OBUS còn có rất nhiều 
+                ưu đãi hàng tháng, giúp khách hàng đặt được vé xe khách chất lượng cao với giá thấp nhất thị trường. 
+                Hành khách có thể dễ dàng lựa chọn trước chỗ ngồi yêu thích, thanh toán vé trực tuyến, hoặc bằng tiền 
+                mặt tại các cửa hàng tiện lợi trên cả nước.
+    
+            </p>
+            <p>
+                Phần mềm quản lý hãng xe OBUS đang được hơn 700 hãng xe cả nước tin dùng. Phần mềm hỗ trợ các 
+                nhà xe thay đổi hình thức quản lý thủ công để quản lý hiệu quả và tối ưu hóa doanh thu, giảm thiểu 
+                chi phí, và tăng doanh thu từ mạng lưới đại lý rộng lớn nhất cả nước. Đây là cuộc cách mạng trong 
+                việc công nghệ hóa ngành xe khách.
+            </p> 
+            <p>
+                Phần mềm hỗ trợ đại lý bán vé AMS có hơn 5.000 đại lý sử dụng, giúp tăng doanh thu bán vé của đại lý 
+                và giúp đại lý hỗ trợ chăm sóc khách tốt hơn.
+            </p>
+        </div>
+    </main>
+    <footer id="footer">
+        <p><strong>Email: </strong>obus.booking@gmail.com</p>
+        <p><strong>SĐT: </strong>0912345678</p>
+        <p><strong>Địa chỉ: </strong>Khu dân cư Nhơn Đức, huyện Nhà Bè, TP.HCM</p>
+    </footer>
+</body>
+</html>
