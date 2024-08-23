@@ -240,7 +240,6 @@ function showBougth(){
     let listTicks = document.getElementById('mytickets');
     //Xóa tất cả các ticket lần tìm trước
     listTicks.innerHTML=''
-    
     items.forEach(item => {
         var li = document.createElement(`li`);
         li.innerHTML = `<div class="ticket">
