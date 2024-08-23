@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="JS/OBUS.js"></script>
     <link href="CSS/General.css" rel="stylesheet">
     <link href="CSS/demo.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="ticket" onclick='clickTicket()'  rel='${i}'>
+        
         <div class="flex">
             <h3>Via</h3>
-            <h3 class="state">Đã đặt</h3>
+            <h3 id="state">Đã đặt</h3>
         </div>
         <p>Ghế</p>
         <div class="flex ticketInfor">
@@ -32,12 +34,18 @@
         <h3>
             Thông tin
         </h3>
-        <p>Tên: Nhân Trần</p>
-        <p>Số điện thoại: 0912345678</p>
+        <p><strong>Tên:</strong> Nhân Trần</p>
+        <p><strong>Số điện thoại:</strong> 0912345678</p>
         <div class="flex">
-            <h2>Tổng tiền</h2>
+            <h2>Tổng tiền:</h2>
             <p class="price">500.000 VNĐ</p>
         </div>
+        <button popovertarget="confirm" id="cancelTicket">&times; Hủy vé</button>
+    </div>
+    <div id="confirm" popover>
+        <p>Bạn có chắc muốn hủy vé?</p>
+        <button id="deleteBtn">Xóa vé</button>
+        <button id="cancelBtn">Hủy</button>
     </div>
 </body>
 </html>

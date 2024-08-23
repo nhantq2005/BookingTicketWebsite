@@ -1,11 +1,21 @@
 
 h3{
+    padding-bottom: 1rem;
+}
+
+section{
     padding: 1rem;
 }
 
 /*Vé*/
 .ticket h3,p{
     margin: 0;
+}
+
+@media (max-width:400px) {
+    p,a{
+        font-size: 12px;
+    }
 }
 
 .ticket:hover{
@@ -38,5 +48,89 @@ p.price{
     display: block;
     width: 100%;
 }
+
+li{
+    margin-bottom: 1rem;
+}
+
+
+.ticket{
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    margin-bottom: 2rem;
+    width: 90%;
+    position: relative;
+    margin: auto;
+
+}
+
+.ticket h3,h2{
+    margin-bottom: 0.1%;
+}
+
+.ticket:hover{
+    box-shadow: 0 0 9px rgba(0,0,0,0.4);
+}
+
+.ticketInfor{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticket i{
+    font-size: 2rem
+}
+
+p.price{
+    font-size: 1.5rem;
+    color: #FF5E1F;
+    font-weight: bold;
+}
+
+.ticket span{
+    font-size: 1rem;
+    color: rgb(134, 134, 134);
+    padding: 1rem;
+}
+
+#state{
+    color: #14C38E;
+    font-size: 1.5rem;
+}
+
+#confirm{
+    width: 25%;
+    height: 30%;
+    text-align: center;
+    border: none;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    border-radius: 0.5rem;
+    align-content: center;
+}
+
+#confirm button{
+    width: 25%;
+    cursor: pointer;
+}
+
+#deleteBtn{
+    color: white;
+    background-color: #E4003A;
+}
+
+#cancelTicket{
+    background-color: #E4003A;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+[popover]::backdrop{
+    backdrop-filter: blur(3px);
+}
+
+
 
 

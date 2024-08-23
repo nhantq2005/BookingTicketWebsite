@@ -4,14 +4,29 @@ section{
 
 }
 
-@media (max-width: 800px) {
+@media (max-width: 500px) {
     .filter{
-        width: 100%;
-        display: block;
+        text-align: center;
+        width: 100% !important;
+        position: static;
+
     }
     .info{
-        width: 100%;
+        width: 100% !important;
     }
+
+    ul#tickets{
+        margin: 0;
+        padding: 1rem;
+    }
+    #filterMobile{
+        display: block !important;
+        position: fixed;
+        top: 25%;
+        left: 0;
+    }
+    
+
 }
 
 .filter{
@@ -20,6 +35,7 @@ section{
     left: 0;
     width: 17%;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    background-color: white;
     padding: 1rem;
     align-self: flex-start;
 }
@@ -33,12 +49,17 @@ section{
     width: 75%; 
 }
 
-
 .ticket{
     border-radius: 1rem;
     padding: 1.5rem;
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
     margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+#tickets{
+    position: relative;
+    margin-right: 0;
 }
 
 .ticket h3,p{
@@ -75,4 +96,16 @@ p.price{
     display: block;
     width: 100%;
     cursor: pointer;
+}
+
+/* Nut trong khung loc */
+#filterBtn,#resetBtn{
+    width: 40%;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#filterBtn{
+    background-color: #FB6D48;
+    color: white;
 }

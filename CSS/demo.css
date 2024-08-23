@@ -5,6 +5,8 @@
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
     margin-bottom: 1rem;
     width: 80%;
+    position: relative;
+    margin: auto;
 
 }
 
@@ -37,6 +39,38 @@ p.price{
     padding: 1rem;
 }
 
-.state{
+#state{
     color: #14C38E;
+    font-size: 1.5rem;
 }
+
+#confirm{
+    width: 25%;
+    text-align: center;
+    border: none;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    border-radius: 0.5rem;
+}
+
+#confirm button{
+    width: 25%;
+    cursor: pointer;
+}
+
+#deleteBtn{
+    color: white;
+    background-color: #E4003A;
+}
+
+#cancelTicket{
+    background-color: #E4003A;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+[popover]::backdrop{
+    backdrop-filter: blur(3px);
+}
+

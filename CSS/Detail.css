@@ -1,3 +1,19 @@
+main{
+    padding: 2rem;
+}
+
+@media (max-width:500px) {
+    section{
+        flex-direction: column;
+    }
+    .detailTicket,.showImages{
+        width: 100% !important;
+    }
+    #bookBtn{
+        width: 40% !important;
+    }
+}
+
 div.thumb div{
     width: 20%;
     padding: 0.3rem;
@@ -13,10 +29,34 @@ div.showImages img{
     width: 40%;
 }
 
+img{
+    border-radius: 1rem;
+
+}
+
 .detailTicket{
     width: 50%;
+    line-height: 2rem
 }
+
 section button{
     display: block;
 
+}
+
+input#quantity{
+    border: 1px solid black;
+    text-align: center;
+}
+
+#bookBtn{
+    color: white;
+    font-weight: bold;
+    background-color: #FF5E1F;
+    width: 50%;
+    cursor: pointer;
+}
+
+.show{
+    display: block !important;
 }
