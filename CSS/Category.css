@@ -19,14 +19,15 @@ section{
         margin: 0;
         padding: 1rem;
     }
+
     #filterMobile{
         display: block !important;
         position: fixed;
+        /* Cố định nút filter */
         top: 25%;
         left: 0;
     }
     
-
 }
 
 .filter{
@@ -89,6 +90,7 @@ p.price{
     font-size: 1rem;
     color: darkgray;
 }
+
 .bookingButton{
     background-color:#FF5E1F;
     color: white;
@@ -98,7 +100,7 @@ p.price{
     cursor: pointer;
 }
 
-/* Nut trong khung loc */
+/* Style các nút trong khung filter */
 #filterBtn,#resetBtn{
     width: 40%;
     font-weight: 700;
@@ -108,4 +110,8 @@ p.price{
 #filterBtn{
     background-color: #FB6D48;
     color: white;
+}
+
+#filterMobile{
+    display: none;
 }

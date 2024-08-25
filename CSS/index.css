@@ -1,7 +1,7 @@
 main{
     padding: 1.5rem;
 }
-
+/* Chuyến phổ biến */
 .populars{
     overflow: auto;
     white-space: nowrap;
@@ -17,6 +17,18 @@ main{
 
 }
 
+/* Div click scale */
+.populars div:hover{
+    transform: scale(1,1);
+    cursor: pointer;
+}
+
+/* Các div không được click sẽ mờ */
+.populars:hover >div:not(:hover){
+    filter: blur(10px);
+    transform: scale(0.9,0.9);
+}
+
 .populars img{
     width: 100%;
     border-radius: 1.3rem;
@@ -30,6 +42,7 @@ main{
     flex: auto;
 }
 
+/* Thong tin chi tiet */
 #about p{
     font-size: 1.1rem;
     text-align: justify;

@@ -28,10 +28,12 @@ ul li{
     justify-content: space-between;
 }
 
+/* Email ở footer */
 a#mail{
     color: white;
 }
 
+/* Style cho mobile */
 @media (max-width:500px) {
     html{
         font-size: 12px !important;
@@ -95,6 +97,7 @@ ul.navBar>li:first-child{
     background-color: transparent;
 }
 
+/* Menu con */
 ul.navBar>li:hover .subMenu{
     display: block;
     cursor: pointer;
@@ -155,12 +158,18 @@ div.searchBar{
     display: inline;
 }
 
+/* Nút hoán đổi */
+#swap{
+    cursor: pointer;
+}
+
 #toUp{
     position: fixed;
-    bottom: 1rem;
+    bottom: 3rem;
     right: 0.5rem;
     padding: 1rem;
     box-shadow: 0 0 7px rgba(0,0,0, 0.4);
+    cursor: pointer;
 }
 
 /* Footer */
@@ -169,4 +178,24 @@ footer{
     color: white;
     line-height: 1.5rem;
     padding: 0.5rem;
+}
+
+footer i{
+    font-size: 2rem;
+    margin: 0.5rem;
+}
+
+img.bus{
+    width: 4rem;
+    right: 100%;
+    position: absolute;
+    mix-blend-mode: exclusion;
+    animation: bus 6s ease-in-out infinite;
+    margin-top: 2rem
+}
+
+@keyframes bus{
+    to{
+        right: 0;
+    }
 }

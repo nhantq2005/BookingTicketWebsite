@@ -11,12 +11,12 @@ section{
 .ticket h3,p{
     margin: 0;
 }
-
-@media (max-width:400px) {
+/* 
+@media (max-width:500px) {
     p,a{
         font-size: 12px;
     }
-}
+} */
 
 .ticket:hover{
     box-shadow: 0 0 9px rgba(0,0,0,0.4);
@@ -109,6 +109,7 @@ p.price{
     align-content: center;
 }
 
+/* Cửa sổ xác nhận hủy */
 #confirm button{
     width: 25%;
     cursor: pointer;
@@ -127,6 +128,7 @@ p.price{
     
 }
 
+/* Tạo hiệu ứng mờ khi hiển thị cửa sổ popup */
 [popover]::backdrop{
     backdrop-filter: blur(3px);
 }
