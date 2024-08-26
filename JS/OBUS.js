@@ -113,6 +113,7 @@ window.addEventListener('load',function(){
 
     // Ẩn nút filter khi màn hình mobile
     let filter = this.document.querySelector(".filter")
+    //Kiểm tra kích thước màn hình
     if(this.screen.width<500){
         filter.style.display="none"
     }
@@ -132,7 +133,7 @@ window.addEventListener('load',function(){
 // MÀN HÌNH USER INFORMATION    
 window.addEventListener('load',function(){
     // Hiển thị thông tin đã lưu trước đó
-    
+
     // Bắt sự kiện nút lưu
     let saveBtn=document.querySelector('#saveBtn')
     saveBtn.onclick = function(){
