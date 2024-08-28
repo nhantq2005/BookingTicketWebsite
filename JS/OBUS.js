@@ -7,6 +7,7 @@ class ticketInfo{
         this.timeStart = timeStart
         this.timeEnd = timeEnd
         this.time = time
+
     }
 }
 
@@ -73,6 +74,10 @@ window.addEventListener('load',function(){
 
 // MÀN HÌNH CATEGORY
 window.addEventListener('load',function(){
+    let filterBtn = this.document.querySelector('#filterBtn')
+    filterBtn.onclick=function(){
+        FilterTicket()
+    }
     toTop()
     // Hoán đổi điểm đi và đến
     let swapBtn = this.document.querySelector('#swap')
@@ -103,13 +108,7 @@ window.addEventListener('load',function(){
         appendHTML(startPlace,destinationPlace,dateStart)
     }
     // Bắt onclick trên các thanh vé
-    let tickets = document.querySelectorAll('#tickets li>div.ticket')   
-    for(let tick of tickets){
-        tick.onclick = function(){
-            clickTicket()
-            
-        }
-    }
+    clickTicket()
 
     // Ẩn nút filter khi màn hình mobile
     let filter = this.document.querySelector(".filter")
@@ -132,13 +131,28 @@ window.addEventListener('load',function(){
 
 // MÀN HÌNH USER INFORMATION    
 window.addEventListener('load',function(){
-    // Hiển thị thông tin đã lưu trước đó
-
+    var flag =0
     // Bắt sự kiện nút lưu
     let saveBtn=document.querySelector('#saveBtn')
     saveBtn.onclick = function(){
-        saveInfo()
+        let textfield = document.querySelectorAll('input')
+        for(let item of textfield){
+            if(item.value===''){
+                item.style.border= '2px solid red'
+                flag = 1
+            }
+        }
+        if(flag)
+            alert("Vui lòng nhập đầy đủ thông tin")
+        else
+            saveInfo()
     }
+    // Hiển thị thông tin đã lưu trước đó
+    this.document.getElementById('lastName').value = sessionStorage.getItem('lastName')
+    this.document.getElementById('firstName').value = sessionStorage.getItem('firstName')
+    this.document.getElementById('year').value = sessionStorage.getItem('yearBorn')
+    this.document.getElementById('phoneNumber').value = sessionStorage.getItem('phoneNumber')
+    this.document.getElementById('email').value = sessionStorage.getItem('email')
 })
 
 // Lấy mảng từ Local Storage
@@ -235,6 +249,8 @@ function appendHTML(startPlace,destinationPlace,dateStart) {
         }
     }
 }
+
+// Hàm lấy giá trị để gửi qua màn hình DETAIL
 function clickTicket(){
     let tickets = document.querySelectorAll('#tickets li>div.ticket')   
     for(let tick of tickets){

@@ -10,13 +10,7 @@ section{
 /*Vé*/
 .ticket h3,p{
     margin: 0;
-}
-/* 
-@media (max-width:500px) {
-    p,a{
-        font-size: 12px;
-    }
-} */
+}                                   
 
 .ticket:hover{
     box-shadow: 0 0 9px rgba(0,0,0,0.4);
@@ -53,7 +47,6 @@ li{
     margin-bottom: 1rem;
 }
 
-
 .ticket{
     border-radius: 1rem;
     padding: 1.5rem;
@@ -62,7 +55,6 @@ li{
     width: 90%;
     position: relative;
     margin: auto;
-
 }
 
 .ticket h3,h2{

@@ -4,9 +4,6 @@ main{
 
 @media (max-width:500px) {
     section{
-        html{
-            font-size: 12px;
-        }
         flex-direction: column;
     }
     .detailTicket,.showImages{

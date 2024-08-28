@@ -196,6 +196,6 @@ img.bus{
 
 @keyframes bus{
     to{
-        right: 0;
+        right: 0px;
     }
 }
