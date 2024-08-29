@@ -3,6 +3,8 @@ html{
     font-family: Arial, serif;
     color: black;
     scroll-behavior: smooth;
+    /* Cắt phần tử bị tràng ra ngoài */
+    overflow-x: hidden;
 }
 
 a{
@@ -38,6 +40,9 @@ a#mail{
     html{
         font-size: 12px !important;
     }
+    #popup-fail{
+        display: none;
+    }
     p{
         font-size: 1rem;
     }
@@ -49,7 +54,6 @@ a#mail{
         display: block;
         cursor: pointer;
     }
-    
 }
 
 /* Thanh chuyển giữa các trang */
@@ -180,9 +184,18 @@ footer{
     padding: 0.5rem;
 }
 
+footer a{
+    color: white;
+}
+
 footer i{
     font-size: 2rem;
     margin: 0.5rem;
+}
+
+/* Animation xe bus */
+div#bus-animation{
+    position: relative;
 }
 
 img.bus{
@@ -196,6 +209,47 @@ img.bus{
 
 @keyframes bus{
     to{
-        right: 0px;
+        right: -100px;
     }
+}
+
+/* Hiển thị Popup */
+#popup-success{
+    background-color: #019267;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: absolute;
+    top:6rem;
+    left: -35rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: 0.5s;
+}
+
+#popup-success.active{
+    left: 0.5rem;
+}
+
+#popup-fail,#popup-fail1{
+    background-color: #E4003A;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: absolute;
+    top:6rem;
+    left: -35rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: 0.5s;
+}
+
+#popup-fail.active{
+    left: 0.5rem;
+}
+
+#popup-fail1.active{
+    left: 0.5rem;
 }

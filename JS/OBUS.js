@@ -48,11 +48,12 @@ window.addEventListener('load',function(){
         let dateStart = document.getElementById('dateStart_index').value
         // Kiểm tra nhâph
         if(startPlace==='' || destinationPlace==='' || dateStart==='') {
-            alert('Vui lòng nhập đây đủ thông tin!')
+            showPopup('popup-fail')
         }
         else if(startPlace===destinationPlace){
-            alert('Điểm đi trùng điểm đến. Vui lòng chọn lại!')
-        }else
+            showPopup('popup-fail1')
+        }
+        else
         {
             // Lưu các biến toàn cục để gửi qua thanh tìm kiếm màn hình Category
             sessionStorage.setItem('global_startPlace', startPlace);
@@ -142,10 +143,13 @@ window.addEventListener('load',function(){
                 flag = 1
             }
         }
-        if(flag)
-            alert("Vui lòng nhập đầy đủ thông tin")
-        else
+        if(flag){
+            showPopup('popup-fail')
+        }
+        else{
             saveInfo()
+            showPopup('popup-success')
+        }
     }
     // Hiển thị thông tin đã lưu trước đó
     this.document.getElementById('lastName').value = sessionStorage.getItem('lastName')
@@ -154,6 +158,14 @@ window.addEventListener('load',function(){
     this.document.getElementById('phoneNumber').value = sessionStorage.getItem('phoneNumber')
     this.document.getElementById('email').value = sessionStorage.getItem('email')
 })
+
+function showPopup(idpopup){
+    let popup = document.querySelector(`#${idpopup}`)
+            popup.classList.add("active")
+            setTimeout(()=>{
+                popup.classList.remove("active")
+            },2000)
+}
 
 // Lấy mảng từ Local Storage
 const items = JSON.parse(sessionStorage.getItem('array')) || [];
@@ -173,6 +185,7 @@ window.addEventListener('load',function(){
     // Bắt sự kiện nhấn nút đặt vé
     const bookBtn = this.document.querySelector('#bookBtn')
     bookBtn.onclick = function(){
+
         // Tạo biến tạm lưu class thông tin vé đã mua
         let tmp = new Purchased(
                 sessionStorage.getItem('global_startPlace'),
@@ -185,7 +198,7 @@ window.addEventListener('load',function(){
         // Đẩy biến tạm vào mảng
         items.push(tmp);
         sessionStorage.setItem('array', JSON.stringify(items));
-        alert('Đặt vé thành công')
+        showPopup('popup-success')
     }
 })
 
@@ -214,10 +227,10 @@ function appendHTML(startPlace,destinationPlace,dateStart) {
     tickets.innerHTML=''
     // Kiểm tra thông tin nhập
     if(startPlace==='' || destinationPlace==='' || dateStart==='') {
-        alert('Vui lòng nhập đây đủ thông tin!')
+        showPopup('popup-fail')
     }
     else if(startPlace===destinationPlace){
-        alert('Điểm đi trùng điểm đến. Vui lòng chọn lại!')
+        showPopup('popup-fail1')
     }else {
         for(let i =0;i<ticketList.length;i++){
             // Tạo thẻ li
@@ -269,7 +282,6 @@ function saveInfo(){
     sessionStorage.setItem('yearBorn',document.getElementById('year').value)
     sessionStorage.setItem('phoneNumber',document.getElementById('phoneNumber').value)
     sessionStorage.setItem('email',document.getElementById('email').value)
-    alert('Lưu thông tin thành công!')
 }
 
 
@@ -356,3 +368,4 @@ function toTop(){
         docEl.scrollTo({top:0})
     }
 }
+

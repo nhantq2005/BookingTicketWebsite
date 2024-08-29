@@ -3,6 +3,9 @@ main{
 }
 
 @media (max-width:500px) {
+    html{
+        font-size: 12px !important;
+    }
     section{
         flex-direction: column;
     }
