@@ -7,7 +7,6 @@ class ticketInfo{
         this.timeStart = timeStart
         this.timeEnd = timeEnd
         this.time = time
-
     }
 }
 
@@ -118,7 +117,7 @@ window.addEventListener('load',function(){
         filter.style.display="none"
     }
     // Tạo biến lưu trạng thái hiện của bảng Filter
-    var show = true;
+    var show = false;
     let filterMobile = this.document.querySelector('#filterMobile')
     filterMobile.onclick = function(){
         show = !show
@@ -132,15 +131,18 @@ window.addEventListener('load',function(){
 
 // MÀN HÌNH USER INFORMATION    
 window.addEventListener('load',function(){
-    var flag =0
+
     // Bắt sự kiện nút lưu
     let saveBtn=document.querySelector('#saveBtn')
     saveBtn.onclick = function(){
+        var flag =0
         let textfield = document.querySelectorAll('input')
         for(let item of textfield){
             if(item.value===''){
-                item.style.border= '2px solid red'
+                item.classList.add('null-value')
                 flag = 1
+            }else{
+                item.classList.remove('null-value')
             }
         }
         if(flag){
@@ -182,6 +184,22 @@ window.addEventListener('load',function(){
         }
     }
 
+    var num = parseFloat(document.getElementById('quantity').value)
+    let plusBtn = document.querySelector('#plus')
+    plusBtn.onclick= function(){
+        num++;
+        document.getElementById('quantity').value=num
+    }
+
+    let minusBtn = document.querySelector('#minus')
+    minusBtn.onclick= function(){
+        if(num>1)
+        {
+            num--;
+            document.getElementById('quantity').value=num
+        }
+    }
+
     // Bắt sự kiện nhấn nút đặt vé
     const bookBtn = this.document.querySelector('#bookBtn')
     bookBtn.onclick = function(){
@@ -198,7 +216,9 @@ window.addEventListener('load',function(){
         // Đẩy biến tạm vào mảng
         items.push(tmp);
         sessionStorage.setItem('array', JSON.stringify(items));
+
         showPopup('popup-success')
+
     }
 })
 
@@ -350,6 +370,7 @@ function showBougth(){
     )
 }
 
+// Nút về đầu trang
 function toTop(){
     const scrollToTopBtn = document.getElementById('toUp')
     const docEl = document.documentElement
@@ -368,4 +389,3 @@ function toTop(){
         docEl.scrollTo({top:0})
     }
 }
-

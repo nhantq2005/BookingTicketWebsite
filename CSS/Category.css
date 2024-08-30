@@ -8,8 +8,7 @@ section{
     .filter{
         text-align: center;
         width: 100% !important;
-        position: static;
-
+        background-color: rgba(255, 255, 255, 1) !important;
     }
     .info{
         width: 100% !important;

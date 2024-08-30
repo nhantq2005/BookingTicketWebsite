@@ -52,6 +52,12 @@ input#quantity{
     text-align: center;
 }
 
+#plus,#minus{
+    display: inline-block;
+    background-color: lightgray;
+    cursor: pointer;
+}
+
 #bookBtn{
     color: white;
     font-weight: bold;

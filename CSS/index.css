@@ -1,3 +1,9 @@
+@media (max-width:500px) {
+    .populars div{
+        width: 50% !important;
+    }
+}
+
 main{
     padding: 1.5rem;
 }
@@ -14,7 +20,6 @@ main{
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
     text-align: center;
     border-radius: 1rem;
-
 }
 
 /* Div click scale */
@@ -40,7 +45,7 @@ main{
     font-size: 1.4rem;
     font-weight: bold;
     flex: auto;
-    flex-wrap: wrap;
+
 }
 
 /* Thong tin chi tiet */

@@ -46,10 +46,6 @@ a#mail{
     p{
         font-size: 1rem;
     }
-    .filter{
-        width: 100%;
-        display: block;
-    }
     ul.navBar>li:active .subMenu{
         display: block;
         cursor: pointer;
@@ -209,7 +205,7 @@ img.bus{
 
 @keyframes bus{
     to{
-        right: -100px;
+        right: 0px;
     }
 }
 
