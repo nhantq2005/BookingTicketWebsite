@@ -109,14 +109,7 @@ window.addEventListener('load',function(){
         appendHTML(startPlace,destinationPlace,dateStart)
     }
     // Bắt onclick trên các thanh vé
-    let tickets = document.querySelectorAll('#tickets li>div.ticket')   
-    for(let tick of tickets){
-        tick.onclick = function(){
-            // Lấy rel để biết vị trị ptử thông tin trong mảng
-            sessionStorage.setItem('posInfo',this.getAttribute('rel'))
-            window.location='Detail.html'
-        }
-    }
+    openDetail()
 
     // Ẩn nút filter khi màn hình mobile
     let filter = this.document.querySelector(".filter")
@@ -136,6 +129,17 @@ window.addEventListener('load',function(){
         }
     }
 })
+
+function openDetail(){
+    let tickets = document.querySelectorAll('#tickets li>div.ticket')   
+    for(let tick of tickets){
+        tick.onclick = function(){
+            // Lấy rel để biết vị trị ptử thông tin trong mảng
+            sessionStorage.setItem('posInfo',this.getAttribute('rel'))
+            window.location='Detail.html'
+        }
+    }
+}
 
 // MÀN HÌNH USER INFORMATION    
 window.addEventListener('load',function(){
