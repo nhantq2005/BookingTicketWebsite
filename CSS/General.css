@@ -50,6 +50,10 @@ a#mail{
         display: block;
         cursor: pointer;
     }
+
+    #popup-fail::before{
+        content: "Prefix";
+    }
 }
 
 /* Thanh chuyển giữa các trang */
@@ -228,7 +232,7 @@ img.bus{
     left: 0.5rem;
 }
 
-#popup-fail,#popup-fail1{
+#popup-fail,#popup-error{
     background-color: #E4003A;
     color: white;
     font-weight: bold;
@@ -246,6 +250,6 @@ img.bus{
     left: 0.5rem;
 }
 
-#popup-fail1.active{
+#popup-error.active{
     left: 0.5rem;
 }

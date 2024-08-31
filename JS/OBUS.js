@@ -45,12 +45,12 @@ window.addEventListener('load',function(){
         let startPlace = document.getElementById('start_index').value
         let destinationPlace = document.getElementById('destination_index').value
         let dateStart = document.getElementById('dateStart_index').value
-        // Kiểm tra nhâph
+        // Kiểm tra nhập
         if(startPlace==='' || destinationPlace==='' || dateStart==='') {
             showPopup('popup-fail')
         }
         else if(startPlace===destinationPlace){
-            showPopup('popup-fail1')
+            showPopup('popup-error')
         }
         else
         {
@@ -74,11 +74,9 @@ window.addEventListener('load',function(){
 
 // MÀN HÌNH CATEGORY
 window.addEventListener('load',function(){
-    let filterBtn = this.document.querySelector('#filterBtn')
-    filterBtn.onclick=function(){
-        FilterTicket()
-    }
+    // Nút về đầu trang
     toTop()
+
     // Hoán đổi điểm đi và đến
     let swapBtn = this.document.querySelector('#swap')
     swapBtn.onclick=function(){
@@ -93,12 +91,15 @@ window.addEventListener('load',function(){
     let dateStart = sessionStorage.getItem('global_dateStart')
     let dateEnd = sessionStorage.getItem('global_dateEnd')
     // Đưa thông tin vào thanh tìm kiếm
+
     document.getElementById('start').value=startPlace
     document.getElementById('destination').value=destinationPlace
     document.getElementById('dateStart').value=dateStart
     document.getElementById('dateEnd').value=dateEnd
+
     // In thông tin nhập từ INDEX
     appendHTML(startPlace,destinationPlace,dateStart)
+
     // Tìm kiếm dựa trên thanh ở CATEGORY
     let searchButton = document.querySelector('#searchButton')
     searchButton.onclick =function(){
@@ -108,7 +109,14 @@ window.addEventListener('load',function(){
         appendHTML(startPlace,destinationPlace,dateStart)
     }
     // Bắt onclick trên các thanh vé
-    clickTicket()
+    let tickets = document.querySelectorAll('#tickets li>div.ticket')   
+    for(let tick of tickets){
+        tick.onclick = function(){
+            // Lấy rel để biết vị trị ptử thông tin trong mảng
+            sessionStorage.setItem('posInfo',this.getAttribute('rel'))
+            window.location='Detail.html'
+        }
+    }
 
     // Ẩn nút filter khi màn hình mobile
     let filter = this.document.querySelector(".filter")
@@ -131,7 +139,6 @@ window.addEventListener('load',function(){
 
 // MÀN HÌNH USER INFORMATION    
 window.addEventListener('load',function(){
-
     // Bắt sự kiện nút lưu
     let saveBtn=document.querySelector('#saveBtn')
     saveBtn.onclick = function(){
@@ -163,6 +170,7 @@ window.addEventListener('load',function(){
 
 function showPopup(idpopup){
     let popup = document.querySelector(`#${idpopup}`)
+    console.log('POPUP')
             popup.classList.add("active")
             setTimeout(()=>{
                 popup.classList.remove("active")
@@ -213,6 +221,7 @@ window.addEventListener('load',function(){
                 user.name,
                 user.phoneNumber
             );
+
         // Đẩy biến tạm vào mảng
         items.push(tmp);
         sessionStorage.setItem('array', JSON.stringify(items));
@@ -224,7 +233,9 @@ window.addEventListener('load',function(){
 
 // MÀN HÌNH MY TICKET
 window.addEventListener('load',function(){
+    // Nút về đầu trang
     toTop()
+
     // In màn hình vé đã mua
     showBougth();
     let deleteBtn = document.querySelector('#confirm #deleteBtn')
@@ -243,14 +254,16 @@ window.addEventListener('load',function(){
 function appendHTML(startPlace,destinationPlace,dateStart) {
     //Lấy ID của ul danh sách vé
     let tickets = document.getElementById('tickets');
+
     //Xóa tất cả các ticket lần tìm trước
     tickets.innerHTML=''
+
     // Kiểm tra thông tin nhập
     if(startPlace==='' || destinationPlace==='' || dateStart==='') {
         showPopup('popup-fail')
     }
     else if(startPlace===destinationPlace){
-        showPopup('popup-fail1')
+        showPopup('popup-error')
     }else {
         for(let i =0;i<ticketList.length;i++){
             // Tạo thẻ li
@@ -283,18 +296,6 @@ function appendHTML(startPlace,destinationPlace,dateStart) {
     }
 }
 
-// Hàm lấy giá trị để gửi qua màn hình DETAIL
-function clickTicket(){
-    let tickets = document.querySelectorAll('#tickets li>div.ticket')   
-    for(let tick of tickets){
-        tick.onclick = function(){
-            // Lấy rel để biết vị trị ptử thông tin trong mảng
-            sessionStorage.setItem('posInfo',this.getAttribute('rel'))
-            window.location='Detail.html'
-        }
-    }
-}
-
 function saveInfo(){
     // Tạo các biến toàn cục lưu thông tin
     sessionStorage.setItem('lastName',document.getElementById('lastName').value)
@@ -309,6 +310,7 @@ function saveInfo(){
 function updateInfo(){
     // Lấy positin trong mảng
     let i = sessionStorage.getItem('posInfo')
+
     // Thay đổi thông tin trong màn hình DETAIL
     document.getElementById("nameBus").innerText=`Nhà xe ${ticketList[i].busName}`
     document.getElementById("seat").innerText=`${ticketList[i].seat}`
