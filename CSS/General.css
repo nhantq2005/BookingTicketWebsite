@@ -51,9 +51,9 @@ a#mail{
         cursor: pointer;
     }
 
-    #popup-fail::before{
+    /* #popup-fail::before{
         content: "Prefix";
-    }
+    } */
 }
 
 /* Thanh chuyển giữa các trang */

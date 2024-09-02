@@ -22,7 +22,7 @@ main{
     border-radius: 1rem;
 }
 
-/* Div click scale */
+/* Div click ccale */
 .populars div:hover{
     transform: scale(1,1);
     cursor: pointer;

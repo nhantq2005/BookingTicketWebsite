@@ -107,6 +107,7 @@ window.addEventListener('load',function(){
         let destinationPlace = document.getElementById('destination').value
         let dateStart = document.getElementById('dateStart').value
         appendHTML(startPlace,destinationPlace,dateStart)
+        openDetail()
     }
     // Bắt onclick trên các thanh vé
     openDetail()
@@ -125,7 +126,7 @@ window.addEventListener('load',function(){
         if(show){
             filter.style.display="block"
         }else{
-                filter.style.display="none"
+            filter.style.display="none"
         }
     }
 })
